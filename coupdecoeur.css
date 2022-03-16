@@ -75,19 +75,11 @@ footer img {
     margin: 8px;
 }
 
-.coeur {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.coeur:hover {
+.coupdecoeur .coeur:hover {
     transform: scale(1.2);
 }
 
-.Paul {
+.coupdecoeur .Paul {
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-color);
@@ -100,22 +92,43 @@ footer img {
     position: relative;
 }
 
-.Paul p {
+.coupdecoeur .Paul p {
     font-style: italic;
+    font-weight: 400;
 }
 
-.Paul .coeur {
+.coupdecoeur .Paul span .logo-paul {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: -25px;
+    left: 140px;
+}
+
+.coupdecoeur .Paul span {
+    position: relative;
+}
+
+.coupdecoeur .Paul .coeur {
     right: 20px;
     left: 20px;
 }
 
-.Paul div img {
+.coupdecoeur .coeur {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.coupdecoeur .Paul div img {
     height: 250px;
     display: flex;
     background-size: cover;
 }
 
-.Paul div {
+.coupdecoeur .Paul div {
     width: 100%;
     display: flex;
     align-items: center;
@@ -124,28 +137,26 @@ footer img {
     font-weight: bolder;
 }
 
-.Paul h1 {
+.coupdecoeur .Paul h1 {
     text-align: center;
     margin-top: 15px;
     width: 100%;
     color: white;
     font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
 }
 
-h1 {
-    font-weight: bolder;
-}
-
-.contenu {
+.coupdecoeur .contenu {
     padding: 0 5%;
 }
 
-.texte-white {
+.coupdecoeur .texte-white {
     color: white;
-    font-weight: bolder;
+    font-weight: 400;
 }
 
-.wilder {
+.coupdecoeur .wilder {
     background-color: var(--brighter-color);
     display: flex;
     margin: auto;
@@ -158,39 +169,45 @@ h1 {
     box-shadow: 5px 2px 2px var(--darker-color);
     text-align: center;
     font-style: italic;
-    font-weight: bolder;
 }
 
-.wilder img:nth-child(2) {
+.coupdecoeur .wilder img:nth-child(2) {
     height: 200px;
 }
 
 @media screen and (min-width: 600px) {
-    .contenu {
+    .coupdecoeur .contenu {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 0 5%;
     }
-    .slice {
+    .coupdecoeur .slice {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 60px;
     }
-    .wilder {
-        width: 48%;
+    .coupdecoeur .wilder {
+        width: 45%;
         height: 100%;
         margin: initial;
     }
-    .Paul {
+    .coupdecoeur .Paul {
         width: 100%;
         flex-direction: row;
     }
-    .Paul h1 {
+    .coupdecoeur .Paul h1 {
         text-align: left;
     }
-    .Paul img {
+    .coupdecoeur .Paul img {
         margin-right: 60px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .coupdecoeur .contenu {
+        padding: 0 15%;
     }
 }
