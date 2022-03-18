@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+  }
+    
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+:root {
+    --primary-color: #219ebc;
+    --darker-color: #023047;
+    --brighter-color: #8ECAE6;
+
+    --secondary-color: #ffb703;
+    --flashy-color: #fb8500;
+
+    --spacing: 8px;
+}  
+/*font-family: 'Kanit', sans-serif;
+font-family: 'Noto Sans', sans-serif;*/
+
+
+/*---------BURGER MENU------------*/
+/*            https://www.raphaelbeaudet.fr/creer-un-menu-responsive-uniquement-en-html-css/     */
+
+/*-----------NAV-------------------*/
+.menu {
+  display: none;
+  flex-basis:100%;
+  list-style :none;
+}
+ul.menu{
+  margin:0.3rem;
+  padding: 1rem;
+}
+.menu li a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu li {
+  border-top: 0.07rem solid white ;
+}
+/* s'applique uniquement si la checkbox est checked*/
+.menu-checkbox:checked ~ .menu {
+  display:block;
+}
+.menu-checkbox {
+  opacity: 0;
+  position: absolute;
+  top:-5000px;
+}
+.menu-toggle {
+  padding: 0.07rem 0.6em;
+  color: white;
+  font-size: 3rem;
+}
+/*.menu-checkbox:focus + .menu-toggle {
+  outline: white auto 10px;
+}*/
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#logo-librairie {
+  width: 15rem;
+  padding-left: 1rem;
+  padding-top: 0.7rem;
+}
+nav{
+  background-color: var(--primary-color);
+  margin-bottom: 0.2rem;
+}
+
+@media screen and (min-width: 450px) {
+ .menu-toggle, .menu-checkbox {
+     display: none;
+ }
+  .menu {
+      display: block;
+      flex-basis: auto;
+      margin: 0;
+      padding: 0;   
+  }
+  .menu li {
+      display: inline-block;
+  }
+  #logo-librairie {
+      width: 30rem;
+      padding-left: 0rem;
+      padding-top: 0.7rem;
+  }
+  /*.menu li a {
+      display: inline-block;
+      padding: 0.5rem;
+      color: white;*/
+      /*text-decoration: none;*/
+      /*font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.5rem;
+  }*/
+  .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 100vw;
+  }
+  ul.menu{
+      width: 1000px; /*si l'on veut que le menu soit sur une seule ligne ne desktop : 800px*/
+      margin:0.3rem;
+      gap: 1rem;
+  }
+  .menu li a {
+      display: inline-block;
+      padding: 0.7rem;
+      color: white;
+      text-decoration: none;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 2rem;
+  }
+  .menu li {
+      border-top: 0rem;
+  }
+  .menu li a:hover {
+    color: var(--darker-color);
+    font-weight: bold;
+  }
+
+}
+
+/*-----------------CAROUSSEL------------------*/
+
+#slider {
+	overflow: hidden;
+  margin-top:1rem;
+  margin-bottom : 2.6rem;
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img {
+	width: 20%;
+	float: left;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+/*------------------------BIO PAUL--------------------*/
+.bio-paul {
+  background-color: var(--secondary-color);
+  width: 100vw;
+  font-family: 'Noto Sans', sans-serif;
+  color:var(--darker-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.9rem 0.7rem;
+  padding-bottom: 5rem;
+  border-radius: 0.5rem;
+  line-height: 1.3rem;
+  margin-bottom: 2rem;
+  height: 280px;
+}
+.bio-paul p {
+  padding: 0rem 2rem;
+   position: relative;
+    bottom: 3.7rem;
+}
+.paul-portrait {
+  width: 100px;
+  /*height: 100px;*/
+      position: relative;
+      bottom: 3.2rem;
+}
+
+/*--------------COUPS DE COEUR--------------------*/
+.emphase {
+  /*font-family: 'Kanit', sans-serif;*/
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+}
+.coeur {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 1%;
+  right: 43%;
+}
+.wilder {
+  background-color: var(--brighter-color);
+  width: 80vw;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  margin-bottom: 3.5rem;
+  border-radius: 0.9rem;
+  position: relative;
+  box-shadow: 5px 2px 2px rgb(192, 192, 192);
+  text-align: center;
+  /*font-weight: bolder;*/
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.3rem;
+      /*position: absolute;*/
+
+}
+.wilder img:nth-child(2) {
+  height: 200px;
+  border: 0.1rem solid white;
+  box-shadow: 0.3rem 0.12rem 0.12rem rgb(99, 98, 98);
+}
+.texte-white {
+  color: var(--primary-color);
+  font-weight: bolder;
+  font-family: 'Noto Sans', sans-serif;
+}
+.wilder p {
+  color : var(--darker-color);
+  font-size: 1rem;
+}
+.wilder p em {
+  color: var(--darker-color);
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+.lien-coupdecoeur {
+  text-decoration: none;
+}
+
+
+/* -------FOOTER ----------*/
+
+
+footer {
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  }
+
+h3 {
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer img {
+  width: 25px;
+  padding: 0rem 0.2rem;
+}
+
+/*ul li:first-child {
+  list-style-type: none;
+}
+
+ul li {
+  color: var(--secondary-color);
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+ul li a:hover {
+  color: var(--flashy-color);
+}
+
+ul {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+  gap: 1.3rem;
+}
+
+#logo {
+  padding: 3px;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  height: 90px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  padding: 0px 15px 0px 15px;
+  color: white;
+  margin: auto;
+}
+
+footer img {
+height: 35px;
+margin: 8px;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    padding: 15px 0px 15px 0px;
+  }
+  
+  }
+*/
