@@ -8,32 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E"/>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;1,100&family=Noto+Sans&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Le nez dans les lettres</title>
+    <link rel="shortcut icon" type="Pics" href="Pics/logo-chat-rond.png" id="logo-rond"/>
 </head>
 <body>
+<!---- MENU ---->
     <header class="main-header">
-    
         <nav class="main-navigation">
             <div class="nav-wrapper">
-                <img src="/Pics/logo-chat-librairie.png" alt="logo de la librairie" id="logo-librairie"/>
+                <img src="/Pics/logo-chat-librairie.png" alt="logo de la librairie" id="logo-librairie" href="home.html"/>
                 <input type="checkbox" id="menu-checkbox" class="menu-checkbox"/>
                 <label for="menu-checkbox" class="menu-toggle">&equiv;</label>
                 <ul class="menu">
-                    <li><a href="home.html">Accueil</a></li>
-                    <li><a href="coupdecoeur.html">Coups de ❤</a></li>
-                    <li><a href="events.html">Evènements</a></li>
-                    <li><a href="categories.html">Catégories</a></li>
-                    <li><a href="lalibrairie.html">La librairie</a></li>
+                    <li><a href="home.html" class="current">Accueil</a></li>
+                    <li><a href="coupdecoeur.html" class="other-page">Coups de ❤</a></li>
+                    <li><a href="events.html" class="other-page">Evènements</a></li>
+                    <li><a href="categories.html" class="other-page">Catégories</a></li>
+                    <li><a href="lalibrairie.html" class="other-page">La librairie</a></li>
                 </ul>
             </div> 
         </nav>
-
     </header>
-    <!--       CAROUSSEL     -->
-    <a href="events.html" class="lien-evenements">
+
+<!---- SLIDES ---->
+    <a href="events.html" class="lien-events">
     <div id="slider">
         <figure>
-          <img src="Pics/salon-livre2022.jpg" alt=""/>
+          <img src="Pics/salon-livre2022.jpg" alt="affiche salon du livre jeunesse"/>
           <img src="Pics/dedicace.png" alt=""/>
           <img src="Pics/club-lecture.png" alt=""/>
           <img src="Pics/salon-livre2022.jpg" alt=""/>
@@ -41,9 +42,8 @@
         </figure>
       </div>
     </a>
-
-<!--       PAUL BIO     -->
-
+<!---- PAUL BIO ---->
+<div class="home-container">
     <section class="bio-paul">
         <img src="Pics/paul-cercle-blanc.png" alt="portrait de Paul" class="paul-portrait">
         <p><em class="emphase">" </em>Bonjour, je suis Paul libraire et passionné de livres. 
@@ -51,34 +51,29 @@
             la littérature classique du 19ème siècle, la bande-dessinée, les livres pour enfants 
             ou les polars. Venez chercher des conseils de lecture et flâner au gré de vos envies<em class="emphase">"</em></p>
     </section>
-  
-<!--       COUPS DE COEUR     -->
-
+<!---- COUPS DE COEUR---->
     <a href="coupdecoeur.html" class="lien-coupdecoeur">
-<div class="wilder"> 
+        <div class="wilder"> 
         <img class="coeur" src="Pics/Picto coeur.png" alt="Logo coeur"> 
         <img src="Pics/herouville.jpeg" alt="Coup de coeur Aline">
-        <p>
-            <span class="texte-white">« </span>Grâce à ce roman graphique, j'ai pu découvrir la vie et la biographie de Michel Magne, ... <span class="texte-white"> »</span> <em>Aline</em>
-        </p>
-    </div>
+        <p><span class="texte-white">« </span>Grâce à ce roman graphique, j'ai pu découvrir la vie et la biographie de Michel Magne, ... <span class="texte-white"> »</span> <em>Aline</em></p>
+        </div>
+    </a>
 
-    <div class="wilder"> 
+    <a href="coupdecoeur.html" class="lien-coupdecoeur">
+        <div class="wilder"> 
         <img class="coeur" src="Pics/Picto coeur.png" alt="Logo coeur">
         <img src="Pics/ame.jpeg" alt="Coup de coeur Galatée">
-        <p>
-            <span class="texte-white">« </span>Sept sages avec des croyances différentes tentent de révéler les secrets de la sagesse à la 
-            prochaine génération. Un texte riche, ... <span class="texte-white"> »</span> <em>Galatée</em>
-        </p>
-    </div>
-</a>
-
-<footer>
-    <h3>Ouvert du mardi au samedi de 10h à 19h</h3>
-    <img src="Pics/Logo FB.png" alt="fb" class="fb"/>
-    <img src="Pics/Logo Insta.png" alt="insta" class="insta"/>
-    <h3>2 rue de la Paix 44000 Nantes</h3>
-</footer>
-
+        <p><span class="texte-white">« </span>Sept sages avec des croyances différentes tentent de révéler les secrets de la sagesse à la prochaine génération. Un texte riche, ... <span class="texte-white"> »</span> <em>Galatée</em></p>
+        </div>
+    </a>
+</div>
+<!---- FOOTER---->
+    <footer>
+        <h3>Ouvert du mardi au samedi de 10h à 19h</h3>
+        <img src="Pics/Logo FB.png" alt="fb" class="fb"/>
+        <img src="Pics/Logo Insta.png" alt="insta" class="insta"/>
+        <h3>2 rue de la Paix 44000 Nantes</h3>
+    </footer>
 </body>
 </html>

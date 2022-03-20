@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
   }
-
   body {
     min-height: 100%;
     margin: 0;
@@ -11,14 +10,12 @@
     font-family: 'Kanit', sans-serif;
     font-family: 'Noto Sans', sans-serif;
   }
-    
   h1, h2, h3 {
     margin: 0;
     padding: 0;
     font-size: 1rem;
     font-weight: 400;
   }
-
 :root {
     --primary-color: #219ebc;
     --darker-color: #023047;
@@ -32,17 +29,13 @@
 /*font-family: 'Kanit', sans-serif;
 font-family: 'Noto Sans', sans-serif;*/
 
-
-/*---------BURGER MENU------------*/
-/*            https://www.raphaelbeaudet.fr/creer-un-menu-responsive-uniquement-en-html-css/     */
-
-/*-----------NAV-------------------*/
+/*---- MENU ----*/
 .menu {
   display: none;
   flex-basis:100%;
   list-style :none;
 }
-ul.menu{
+ul.menu {
   margin:0.3rem;
   padding: 1rem;
 }
@@ -84,10 +77,14 @@ ul.menu{
   padding-left: 1rem;
   padding-top: 0.7rem;
 }
-nav{
+nav {
   background-color: var(--primary-color);
   margin-bottom: 0.2rem;
 }
+/*----------------Comprendre pourquoi ne fonctionne pas
+a .current {
+  color: var(--darker-color);
+}*/
 
 @media screen and (min-width: 450px) {
  .menu-toggle, .menu-checkbox {
@@ -107,14 +104,6 @@ nav{
       padding-left: 0rem;
       padding-top: 0.7rem;
   }
-  /*.menu li a {
-      display: inline-block;
-      padding: 0.5rem;
-      color: white;*/
-      /*text-decoration: none;*/
-      /*font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.5rem;
-  }*/
   .nav-wrapper {
       display: flex;
       align-items: center;
@@ -122,31 +111,36 @@ nav{
       flex-wrap: wrap;
       width: 100vw;
   }
-  ul.menu{
-      width: 1000px; /*si l'on veut que le menu soit sur une seule ligne ne desktop : 800px*/
+  ul.menu {
+      width: 1000px; /*si l'on veut que le menu soit sur une seule ligne en desktop : 800px*/
       margin:0.3rem;
       gap: 1rem;
   }
   .menu li a {
       display: inline-block;
       padding: 0.7rem;
-      color: white;
+      /*color: white;*/
       text-decoration: none;
       font-family: 'Noto Sans', sans-serif;
       font-size: 2rem;
   }
-  .menu li {
-      border-top: 0rem;
+  .menu li a.other-page {
+    color: white;
   }
-  .menu li a:hover {
+  .menu li a.current {
     color: var(--darker-color);
     font-weight: bold;
   }
-
+  .menu li {
+    border-top: 0rem;
+  }
+  .menu li a.other-page:hover {
+    color: var(--darker-color);
+    font-weight: bold;
+  }
 }
 
-/*-----------------CAROUSSEL------------------*/
-
+/*---- SLIDES ----*/
 #slider {
 	overflow: hidden;
   margin-top:1rem;
@@ -194,7 +188,7 @@ nav{
 	}
 }
 
-/*------------------------BIO PAUL--------------------*/
+/*---- BIO PAUL ----*/
 .bio-paul {
   background-color: var(--secondary-color);
   width: 100vw;
@@ -212,17 +206,17 @@ nav{
 }
 .bio-paul p {
   padding: 0rem 2rem;
-   position: relative;
-    bottom: 3.7rem;
+  position: relative;
+  bottom: 3.7rem;
 }
 .paul-portrait {
   width: 100px;
   /*height: 100px;*/
-      position: relative;
-      bottom: 3.2rem;
+  position: relative;
+  bottom: 3.2rem;
 }
 
-/*--------------COUPS DE COEUR--------------------*/
+/*---- COUPS DE COEUR ----*/
 .emphase {
   /*font-family: 'Kanit', sans-serif;*/
   font-size: 1.2rem;
@@ -252,13 +246,12 @@ nav{
   /*font-weight: bolder;*/
   font-family: 'Noto Sans', sans-serif;
   font-size: 0.3rem;
-      /*position: absolute;*/
-
+  /*position: absolute;*/
 }
 .wilder img:nth-child(2) {
   height: 200px;
   border: 0.1rem solid white;
-  box-shadow: 0.3rem 0.12rem 0.12rem rgb(99, 98, 98);
+  box-shadow: 0.3rem 0.12rem 0.12rem #636262;
 }
 .texte-white {
   color: var(--primary-color);
@@ -278,10 +271,7 @@ nav{
   text-decoration: none;
 }
 
-
-/* -------FOOTER ----------*/
-
-
+/* ---- FOOTER ----*/
 footer {
   background-color: var(--primary-color);
   width: 100vw;
@@ -290,7 +280,6 @@ footer {
   align-items: center;
   display: flex;
   }
-
 h3 {
   color: white;
   font-family: 'Noto Sans', sans-serif;
@@ -301,70 +290,11 @@ h3 {
   padding: 0.5rem;
   text-align: center;
 }
-
 footer img {
   width: 25px;
   padding: 0rem 0.2rem;
 }
-
-/*ul li:first-child {
-  list-style-type: none;
-}
-
-ul li {
-  color: var(--secondary-color);
-}
-
-ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-ul li a:hover {
-  color: var(--flashy-color);
-}
-
-ul {
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-size: 0.7rem;
-  gap: 1.3rem;
-}
-
-#logo {
-  padding: 3px;
-  max-width: 150px;
-  max-height: 150px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: var(--primary-color);
-  height: 90px;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  background-color: var(--primary-color);
-  justify-content: space-between;
-  padding: 0px 15px 0px 15px;
-  color: white;
-  margin: auto;
-}
-
-footer img {
-height: 35px;
-margin: 8px;
-}
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   footer {
     flex-direction: column;
     padding: 15px 0px 15px 0px;
@@ -372,3 +302,30 @@ margin: 8px;
   
   }
 */
+
+/*---- VERSION DESKTOP ----*/
+@media screen and (min-width: 600px) {
+  #slider {
+    width: 130vh;
+    margin: 5rem auto;
+  }
+  .bio-paul, .wilder {
+    width: 50vh;
+  }
+  .home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem ;
+    margin: 1rem;
+    height: 420px;
+  }
+  .wilder, .bio-paul {
+    height: 100%;
+  }
+  .bio-paul p {
+    padding: 0rem 2rem;
+    position: relative;
+    bottom: 1rem;
+  }
+  }
