@@ -61,11 +61,3 @@ ul {
     max-width: 150px;
     max-height: 150px;
 }
-
-nav {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    height: 90px;
-}

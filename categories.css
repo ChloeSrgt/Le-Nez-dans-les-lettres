@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --primary-color: #219ebc;
+    --darker-color: #023047;
+    --brighter-color: #8ECAE6;
+    --secondary-color: #ffb703;
+    --flashy-color: #fb8500;
+    --spacing: 8px;
+}
+
+
+/*-----------NAV-------------------*/
+
+.menu {
+    display: none;
+    flex-basis: 100%;
+    list-style: none;
+}
+
+ul.menu {
+    margin: 0.3rem;
+    padding: 1rem;
+}
+
+.menu li a {
+    display: inline-block;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu li {
+    border-top: 0.07rem solid white;
+}
+
+
+/* s'applique uniquement si la checkbox est checked*/
+
+.menu-checkbox:checked~.menu {
+    display: block;
+}
+
+.menu-checkbox {
+    opacity: 0;
+    position: absolute;
+    top: -5000px;
+}
+
+.menu-toggle {
+    padding: 0.07rem 0.6em;
+    color: white;
+    font-size: 3rem;
+}
+
+
+/*.menu-checkbox:focus + .menu-toggle {
+  outline: white auto 10px;
+}*/
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#logo-librairie {
+    width: 15rem;
+    padding-left: 1rem;
+    padding-top: 0.7rem;
+}
+
+nav {
+    background-color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+@media screen and (min-width: 450px) {
+    .menu-toggle,
+    .menu-checkbox {
+        display: none;
+    }
+    .menu {
+        display: block;
+        flex-basis: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .menu li {
+        display: inline-block;
+    }
+    #logo-librairie {
+        width: 30rem;
+        padding-left: 0rem;
+        padding-top: 0.7rem;
+    }
+    /*.menu li a {
+      display: inline-block;
+      padding: 0.5rem;
+      color: white;*/
+    /*text-decoration: none;*/
+    /*font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.5rem;
+  }*/
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+    ul.menu {
+        width: 1000px;
+        /*si l'on veut que le menu soit sur une seule ligne ne desktop : 800px*/
+        margin: 0.3rem;
+        gap: 1rem;
+    }
+    .menu li a {
+        display: inline-block;
+        padding: 0.7rem;
+        color: white;
+        text-decoration: none;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 2rem;
+    }
+    .menu li {
+        border-top: 0rem;
+    }
+    .menu li a:hover {
+        color: var(--darker-color);
+        font-weight: bold;
+    }
+}
+
+
+/*-----------CATEGORIES VERSION MOBILE-------------------*/
+
+.categories {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--darker-color);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.litterature,
+.romans,
+.polars,
+.jeunesse,
+.bandes-dessinees,
+.mangas,
+.tourisme-voyages,
+.philo,
+.arts,
+.histoire,
+.sciences-humaines,
+.sante,
+.cuisine-vins,
+.sports-loisirs {
+    width: 80vw;
+    background-color: var(--brighter-color);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 2px 2px var(--darker-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/*-----------CATEGORIES VERSION DESKTOP-------------------*/
+
+@media screen and (min-width: 600px) {
+    .categories {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1000px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .categories div {
+        width: 40%;
+    }
+}
+
+
+/*-----------FOOTER VERSION MOBILE-------------------*/
+
+footer {
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+h3 {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+footer img {
+    width: 25px;
+    padding: 0rem 0.2rem;
+}
+
+
+/*-----------VERSION DESKTOP-------------------*/
+
+@media screen and (min-width: 600px) {
+    h3 {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        padding: 1rem;
+    }
+    footer img {
+        width: 50px;
+        padding: 0rem 0.2rem;
+    }
+}
