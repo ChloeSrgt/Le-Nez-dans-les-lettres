@@ -2,7 +2,6 @@
     box-sizing: border-box;
   }
 
-
   body {
     min-height: 100%;
     margin: 0;
@@ -12,6 +11,7 @@
   }
     
   h1, h2, h3 {
+    font-family: var(--title-font);
     margin: 0;
     padding: 0;
     font-size: 1rem;
@@ -28,48 +28,164 @@
     --flashy-color: #fb8500;
 
     --spacing: 8px;
+
+    --title-font: 'Noto Sans', sans-serif;
+    --body-font: 'Kanit', sans-serif;
 }  
 
-ul li:first-child {
-  list-style-type: none;
-}
-
-ul li {
-  color: var(--secondary-color);
-}
-
-ul li a {
-  text-decoration: none;
+.menu {
+  display: none;
+  flex-basis:100%;
+  list-style :none;
+  }
+  
+  ul.menu{
+  margin:0.3rem;
+  padding: 1rem;
+  }
+  
+  .menu li a {
+  display: inline-block;
+  padding: 0.5rem;
   color: white;
-}
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  .menu li {
+  border-top: 0.07rem solid white ;
+  }
+  
+  /* s'applique uniquement si la checkbox est checked*/
+  
+  .menu-checkbox:checked ~ .menu {
+  display:block;
+  }
+  
+  .menu-checkbox {
+  opacity: 0;
+  position: absolute;
+  top:-5000px;
+  }
+  
+  .menu-toggle {
+  padding: 0.07rem 0.6em;
+  color: white;
+  font-size: 3rem;  
+  }
 
-ul li a:hover {
-  color: var(--flashy-color);
-}
-
-ul {
-  background-color: var(--primary-color);
+  /*.menu-checkbox:focus + .menu-toggle {
+  outline: white auto 10px;
+  }*/
+  
+  .nav-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+  
+  #logo-librairie {
+  width: 15rem;
+  padding-left: 1rem;
+  padding-top: 0.7rem;
+  margin-right: 49px;
+  }
+
+  nav{
+  background-color: var(--primary-color);
+  margin-bottom: 0.2rem;
+  }
+  
+  @media screen and (min-width: 450px) {
+  
+  .menu-toggle, .menu-checkbox {
+  display: none;
+  }
+  #logo-librairie {
+    margin-right: 0px;
+  }
+
+  
+  .menu {
+  display: block;
+  flex-basis: auto;
   margin: 0;
   padding: 0;
-  font-size: 0.7rem;
-  gap: 1.3rem;
-}
+  }
+  
+  .menu li {
+  display: inline-block;
+  }
 
-#logo {
-  padding: 3px;
-  max-width: 150px;
-  max-height: 150px;
-}
+  #logo-librairie {
+  width: 30rem;
+  padding-left: 0rem;
+  padding-top: 0.7rem;
+  }
+  
+  /*.menu li a {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.5rem;
+  }*/
 
+  .nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  }
+  
+  ul.menu{
+  width: 1000px; /*si l'on veut que le menu soit sur une seule ligne en desktop : 800px*/
+  margin:0.3rem;
+  gap: 1rem;
+  }
+
+
+  .menu li a {
+    display: inline-block;
+    padding: 0.7rem;
+    text-decoration: none;
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+.menu li a.other-page {
+  color: white;
+}
+.menu li a.current {
+  color: var(--darker-color);
+  font-weight: bold;
+}
+.menu li {
+  border-top: 0rem;
+}
+.menu li a.other-page:hover {
+  color: var(--darker-color);
+  font-weight: bold;
+}
+  
+  .menu li {
+  border-top: 0rem;
+  }
+  
+  .menu li a:hover {
+  color: var(--darker-color);
+  font-weight: bold;
+  }
+  
+  }
 nav {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: var(--primary-color);
-  height: 90px;
 }
 
 
@@ -107,10 +223,11 @@ nav {
     align-items: center;
 }
 
-#eventpic {
+.eventpic {
     max-width: 250px;
     max-height: 250px;
     margin-bottom: 30px;
+    box-shadow: 5px 2px 2px white;
 }
 
 
@@ -119,17 +236,19 @@ nav {
     margin: 20px;
     width: auto;
     background-color: white;
-    font-size: 8px;
+    font-size: 12px;
     padding: 10px;
     text-align: center;
+    font-family: var(--body-font);
+    border-radius: 0.5rem;
+    box-shadow: 5px 2px 2px var(--flashy-color);  
     
 }
 
 .agendacontainer {
     display: flex;
-    padding: 5;
     flex-direction: column;
-    height: 200px;
+    height: 400px;
     width: 250px;
     margin-left: auto;
     text-align: center;
@@ -138,7 +257,7 @@ nav {
 }
 
 .agendacontainer h2 {
-    margin: 10px;
+  margin: 10px;
 }
 
 .agenda {
@@ -154,33 +273,106 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 8px;
+    font-size: 12px;
+    font-family: var(--body-font);
 }
 .calendar {
-    padding: 3;
     min-height: 40px;
     max-height: 40px;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    justify-content: space-between;
-    padding: 15px 0px 15px 0px;
-    color: white;
-    margin: auto;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  }
+
+h3 {
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.7rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 footer img {
-    height: 35px;
-    margin: 8px;
+  width: 25px;
+  padding: 0rem 0.2rem;
 }
 
 @media screen and (min-width: 600px) {
-    footer {
-        flex-direction: row;
-        padding: 0px 15px 0px 15px;
-    }
+  
+  .void {
+    display: none;
+  }
+  #logo-librairie {
+    margin-right: 0px;
+  }
+  .nav-wrapper {
+    gap: 0px;
+  }
+  
+  .box-container {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .parentbox {
+    height: 400px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+.colorbox {
+  width: 510px;
+  height: 30px;
+}
+.eventpic {
+  max-width: 450px;
+  max-height: 450px;
+  box-shadow: none;
+}
+.eventcontent {
+  font-size: 16px; 
+}
+
+.agendacontainer {
+  height: 380px;
+  width: 500px;
+  margin-top: 20px;
+
+}
+
+.agendacontainer h2 {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.agenda {
+  height: 500px;
+}
+
+.agenda1, .agenda2, .agenda3 {
+  font-size: 14px;
+}
+.calendar {
+  min-height: 80px;
+  max-height: 80px;
+}
+
+  h3 {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding: 1rem;
+  }
+  
+  footer img {
+    width: 50px;
+    padding: 0rem 0.2rem;
+  }
 }
