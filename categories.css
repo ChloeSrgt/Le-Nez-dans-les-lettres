@@ -3,7 +3,22 @@
 }
 
 body {
+    min-height: 100%;
     margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 :root {
@@ -13,10 +28,9 @@ body {
     --secondary-color: #ffb703;
     --flashy-color: #fb8500;
     --spacing: 8px;
+    --title-font: 'Noto Sans', sans-serif;
+    --body-font: 'Kanit', sans-serif;
 }
-
-
-/*-----------NAV-------------------*/
 
 .menu {
     display: none;
@@ -62,8 +76,10 @@ ul.menu {
 
 
 /*.menu-checkbox:focus + .menu-toggle {
-  outline: white auto 10px;
-}*/
+    
+    outline: white auto 10px;
+    
+    }*/
 
 .nav-wrapper {
     display: flex;
@@ -103,13 +119,18 @@ nav {
         padding-top: 0.7rem;
     }
     /*.menu li a {
-      display: inline-block;
-      padding: 0.5rem;
-      color: white;*/
+    
+    display: inline-block;
+    
+    padding: 0.5rem;
+    
+    color: white;*/
     /*text-decoration: none;*/
     /*font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.5rem;
-  }*/
+    
+    font-size: 0.5rem;
+    
+    }*/
     .nav-wrapper {
         display: flex;
         align-items: center;
@@ -119,7 +140,7 @@ nav {
     }
     ul.menu {
         width: 1000px;
-        /*si l'on veut que le menu soit sur une seule ligne ne desktop : 800px*/
+        /*si l'on veut que le menu soit sur une seule ligne en desktop : 800px*/
         margin: 0.3rem;
         gap: 1rem;
     }
@@ -128,8 +149,22 @@ nav {
         padding: 0.7rem;
         color: white;
         text-decoration: none;
-        font-family: 'Noto Sans', sans-serif;
+        font-family: var(--title-font);
         font-size: 2rem;
+    }
+    .menu li a.other-page {
+        color: white;
+    }
+    .menu li a.current {
+        color: var(--darker-color);
+        font-weight: bold;
+    }
+    .menu li {
+        border-top: 0rem;
+    }
+    .menu li a.other-page:hover {
+        color: var(--darker-color);
+        font-weight: bold;
     }
     .menu li {
         border-top: 0rem;
@@ -144,7 +179,7 @@ nav {
 /*-----------CATEGORIES VERSION MOBILE-------------------*/
 
 .categories {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(--title-font);
     font-size: 1rem;
     color: var(--darker-color);
     text-align: right;
@@ -211,8 +246,7 @@ footer {
 
 h3 {
     color: white;
-    font-family: 'Noto Sans', sans-serif;
-    font-style: italic;
+    font-family: var(--title-font);
     font-size: 0.7rem;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
