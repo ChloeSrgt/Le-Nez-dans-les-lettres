@@ -5,36 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lalibrairie.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;1,100&family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Le nez dans les lettres</title>
+    <link rel="shortcut icon" type="image/png" href="Pics/logo-rond.png" id="logo-rond"/>
 </head>
 <body>
-    <nav>
-        <img id="logo" alt="logo" src="Pics/logo.png"/>
-        <ul>
-            <li><a href="/home.html">Accueil</a></li>
-            <li><a href="/coupdecoeur.html">Coup de ❤</a></li>
-            <li><a href="/events.html">Evènements</a></li>
-            <li><a href="/categories.html">Catégories</a></li>
-            <li><a href="/lalibrairie.html">La Librairie</a></li>
-        </ul>
-    </nav>
     
-    <p>Story of the library : Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et 
-    </p>
-
-    <img src="" alt="devanture librairie" class="devanture"/>
-
-    <section class="infos"> 
-        <h1>Horaires</h1>
-        <p>Ouvert du mardi au samedi de 10h à 19h</p>
-        <p>2 rue de la Paix 44000 Nantes 02.00.00.00.00</p>
-        <p>Nous contacter</p>
+    <header class="main-header">
+        <nav class="main-navigation">
+            <div class="nav-wrapper">
+                <a href="home.html">
+                <img src="Pics/logo-chat-librairie.png" alt="logo de la librairie" id="logo-librairie"/></a>
+                <input type="checkbox" id="menu-checkbox" class="menu-checkbox"/>
+                <label for="menu-checkbox" class="menu-toggle">&equiv;</label>
+                <ul class="menu">
+                    <li><a href="home.html" class="other-page">Accueil</a></li>
+                    <li><a href="coupdecoeur.html" class="other-page">Coups de ❤</a></li>
+                    <li><a href="events.html" class="other-page">Evènements</a></li>
+                    <li><a href="categories.html" class="other-page">Catégories</a></li>
+                    <li><a href="lalibrairie.html" class="current">La librairie</a></li>
+                </ul>
+            </div> 
+        </nav>
+    </header>
+    
+    <main class="bloc-container">
+    <section class="story">
+        <p id="story">La librairie a été créée en 2018, situé au 2 rue de la paix à Nantes. Passionné par les livres, nous choisissons, lisons, conseillons et partageons autour des ouvrages et des auteurs.Nous invitons des auteurs et organisons des conférences et dédicaces. </p>
+        Nous vous proposons un large choix de livres, si vous ouvrez la porte du "Nez dans les lettres".<br>
+        À bientôt!<br>
     </section>
 
+    <div class="bloc-orange">
+        <div class="devanture">
+            <img src="Pics/devanture.jpg" alt="devanture librairie"/>
+        </div>
+        <div class="infos"> 
+            <img src="Pics/picto-horloge.png" alt="horloge" class="horloge"/>
+            <h1><strong>Horaires</strong></h1>
+            <p>Ouvert du mardi au samedi de 10h à 19h</p>
+            <p>2 rue de la Paix 44000 Nantes 02.00.00.00.00</p>
+        </div>
+    </div>
     <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.103791034162!2d-1.5563772496482313!3d47.21455142287022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eea5e8895d4f%3A0x350abd921e91a67c!2s2%20Rue%20de%20la%20Paix%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1647426538497!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.1039772482522!2d-1.5563718843830587!3d47.21454777916062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eea5e8895d4f%3A0x350abd921e91a67c!2s2%20Rue%20de%20la%20Paix%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1647445787678!5m2!1sfr!2sfr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    
+    <form id="contact-form">
+        <img src="Pics/picto-contact.png" alt="contact" class="contact"/>
+        <h2><strong>Contactez la librairie</strong></h2>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="@">
+        <label for="text">Objet</label>
+        <input type="text" id="text" placeholder="Réserver un livre">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Une question, un conseil, écrivez-moi 🙂"></textarea>
+        <input type="submit" value="Envoyer">
+    </form>
+</main>
+
+    <footer>
+        <h3>Ouvert du mardi au samedi de 10h à 19h</h3>
+        <div>
+            <a href="https://www.facebook.com/" target="_blank"> <img src="Pics/Logo-fb.png" alt="fb" class="fb" /></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="Pics/Logo-insta.png" alt="insta" class="insta" /></a>
+        </div>
+        <h3>2 rue de la Paix 44000 Nantes</h3>
+    </footer>
+    <script src="lalibrairie.js"></script>
 </body>
 </html>
