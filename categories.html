@@ -1,43 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="categories.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;1,100&family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>Le nez dans les lettres</title>
+    <link rel="shortcut icon" type="image/png" href="Pics/logo-rond.png" id="logo-rond" />
 </head>
+
 <body>
-    <nav>
-        <img id="logo" alt="logo" src="Pics/logo.png"/>
-        <ul>
-            <li><a href="/home.html">Accueil</a></li>
-            <li><a href="/coupdecoeur.html">Coup de ❤</a></li>
-            <li><a href="/events.html">Evènements</a></li>
-            <li><a href="/categories.html">Catégories</a></li>
-            <li><a href="/lalibrairie.html">La Librairie</a></li>
-        </ul>
-    </nav>
+    <header class="main-header">
+        <nav class="main-navigation">
+            <div class="nav-wrapper">
+                <a href="home.html"> <img src="Pics/logo-chat-librairie.png" alt="logo de la librairie" id="logo-librairie" /></a>
+                <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
+                <label for="menu-checkbox" class="menu-toggle">&equiv;</label>
+                <ul class="menu">
+                    <li><a href="home.html" class="other-page">Accueil</a></li>
+                    <li><a href="coupdecoeur.html" class="other-page">Coups de ❤</a></li>
+                    <li><a href="events.html" class="other-page">Evènements</a></li>
+                    <li><a href="categories.html" class="current">Catégories</a></li>
+                    <li><a href="lalibrairie.html" class="other-page">La librairie</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="categories">
+        <div class="litterature">
+            <img src="Pics/picto-litterature.png" alt="picto-litterature" id="picto-litterature" />
+            <p>Littérature</p>
+        </div>
+        <div class="romans">
+            <img src="Pics/picto-romans.png" alt="picto-romans" id="picto-romans" />
+            <p>Romans</p>
+        </div>
+        <div class="polars">
+            <img src="Pics/picto-polars.png" alt="picto-polars" id="picto-polars" />
+            <p>Polars</p>
+        </div>
+        <div class="jeunesse">
+            <img src="Pics/picto-jeunesse.png" alt="picto-jeunesse" id="picto-jeunesse" />
+            <p>Jeunesse</p>
+        </div>
+        <div class="bandes-dessinees">
+            <img src="Pics/picto-bd.png" alt="picto-bd" id="picto-bd" />
+            <p>Bandes Dessinées</p>
+        </div>
+        <div class="mangas">
+            <img src="Pics/picto-mangas.png" alt="picto-mangas" id="picto-mangas" />
+            <p>Mangas</p>
+        </div>
+        <div class="tourisme-voyages">
+            <img src="Pics/picto-tourisme-voyage.png" alt="picto-tourisme-voyage" id="picto-tourisme-voyage" />
+            <p>Tourisme & Voyages</p>
+        </div>
+        <div class="philo">
+            <img src="Pics/picto-philo.png" alt="picto-philo" id="picto-philo" />
+            <p>Philosophie</p>
+        </div>
+        <div class="arts">
+            <img src="Pics/picto-arts.png" alt="picto-arts" id="picto-arts" />
+            <p>Arts</p>
+        </div>
+        <div class="histoire">
+            <img src="Pics/picto-histoire.png" alt="picto-histoire" id="picto-histoire" />
+            <p>Histoire</p>
+        </div>
+        <div class="sciences-humaines">
+            <img src="Pics/picto-sciences-humaines.png" alt="picto-sciences-humaines" id="picto-sciences-humaines" />
+            <p>Sciences Humaines</p>
+        </div>
+        <div class="sante">
+            <img src="Pics/picto-sante.png" alt="picto-sante" id="picto-sante" />
+            <p>Santé & Bien-être</p>
+        </div>
+        <div class="cuisine-vins">
+            <img src="Pics/picto-cuisine-vins.png" alt="picto-cuisine-vins" id="picto-cuisine-vins" />
+            <p>Cuisine & Vins</p>
+        </div>
+        <div class="sports-loisirs">
+            <img src="Pics/picto-sports-loisirs.png" alt="picto-sports-loisirs" id="picto-sports-loisirs" />
+            <p>Sports & Loisirs</p>
+        </div>
+    </div>
+
     <footer>
-        <div> 
-            <span>
-                Ouvert du mardi au samedi de 10h à 19h
-            </span>
-        </div>
+        <h3>Ouvert du mardi au samedi de 10h à 19h</h3>
         <div>
-            <a href="https://facebook.com" target="_blank"> 
-                <img src="Pics/Logo FB.png"/>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                 <img src="Pics/Logo Insta.png"/> 
-            </a>
-          
+        <a href="https://www.facebook.com/" target="_blank"> <img src="Pics/Logo-fb.png" alt="fb" class="fb" /></a>
+        <a href="https://www.instagram.com/" target="_blank"> <img src="Pics/Logo-insta.png" alt="insta" class="insta" /></a>
         </div>
-        <div>
-            <span>
-                2 rue de la Paix 44000 Nantes
-            </span> 
-        </div>
+        <h3>2 rue de la Paix 44000 Nantes</h3>
     </footer>
 </body>
+
 </html>

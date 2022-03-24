@@ -195,6 +195,7 @@ nav {
 }
 
 .parentbox {
+  border-radius: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     height: 300px;
@@ -246,6 +247,7 @@ nav {
 }
 
 .agendacontainer {
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     height: 400px;
