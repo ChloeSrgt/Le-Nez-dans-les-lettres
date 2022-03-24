@@ -71,3 +71,25 @@ nav {
   height: 90px;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  padding: 0px 15px 0px 15px;
+  color: white;
+  margin: auto;
+}
+
+footer img {
+height: 35px;
+margin: 8px;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    padding: 15px 0px 15px 0px;
+  }
+  
+  }
