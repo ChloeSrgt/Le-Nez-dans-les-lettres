@@ -295,6 +295,10 @@ padding: 0rem 0.2rem;
     width: 65vw;
     margin: 5rem auto;
   }
+  
+  .wilder .coeur:hover {
+    transform: scale(1.2);
+}
 
   .bio-paul {
     width: 60vw;
