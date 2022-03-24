@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+:root {
+  --primary-color: #219ebc;
+  --darker-color: #023047;
+  --brighter-color: #8ECAE6;
+
+  --secondary-color: #ffb703;
+  --flashy-color: #fb8500;
+
+  --spacing: 8px;
+
+  --title-font: 'Noto Sans', sans-serif;
+  --body-font: 'Kanit', sans-serif;
+}  
+
+/*---- MENU ----*/
+.menu {
+display: none;
+flex-basis:100%;
+list-style :none;
+}
+ul.menu {
+margin:0.3rem;
+padding: 1rem;
+}
+.menu li a {
+display: inline-block;
+padding: 0.5rem;
+color: white;
+text-decoration: none;
+font-family: var(--title-font);
+}
+.menu li {
+border-top: 0.07rem solid white ;
+}
+/* s'applique uniquement si la checkbox est checked*/
+.menu-checkbox:checked ~ .menu {
+display:block;
+}
+.menu-checkbox {
+opacity: 0;
+position: absolute;
+top:-5000px;
+}
+.menu-toggle {
+padding: 0.07rem 0.6em;
+color: white;
+font-size: 3rem;
+}
+/*.menu-checkbox:focus + .menu-toggle {
+outline: white auto 10px;
+}*/
+.nav-wrapper {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+#logo-librairie {
+width: 15rem;
+padding-left: 1rem;
+padding-top: 0.7rem;
+}
+nav {
+background-color: var(--primary-color);
+margin-bottom: 0.2rem;
+}
+
+@media screen and (min-width: 450px) {
+.menu-toggle, .menu-checkbox {
+   display: none;
+}
+.menu {
+    display: block;
+    flex-basis: auto;
+    margin: 0;
+    padding: 0;   
+}
+.menu li {
+    display: inline-block;
+}
+#logo-librairie {
+    width: 30rem;
+    padding-left: 0rem;
+    padding-top: 0.7rem;
+}
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+ul.menu {
+    width: 1000px;
+    margin:0.3rem;
+    gap: 1rem;
+}
+.menu li a {
+    display: inline-block;
+    padding: 0.7rem;
+    text-decoration: none;
+    font-family: var(--title-font);
+    font-size: 2rem;
+}
+.menu li a.other-page {
+  color: white;
+}
+.menu li a.current {
+  color: var(--darker-color);
+  font-weight: bold;
+}
+.menu li {
+  border-top: 0rem;
+}
+.menu li a.other-page:hover {
+  color: var(--darker-color);
+  font-weight: bold;
+}
+}
+
+/*---- SLIDES ----*/
+#slider {
+overflow: hidden;
+margin-top:1rem;
+margin-bottom : 2.6rem;
+}
+#slider figure {
+position: relative;
+width: 500%;
+margin: 0;
+left: 0;
+animation: 20s slider infinite;
+}
+#slider figure img {
+width: 20%;
+float: left;
+}
+
+@keyframes slider {
+0% {
+  left: 0;
+}
+20% {
+  left: 0;
+}
+25% {
+  left: -100%;
+}
+45% {
+  left: -100%;
+}
+50% {
+  left: -200%;
+}
+70% {
+  left: -200%;
+}
+75% {
+  left: -300%;
+}
+95% {
+  left: -300%;
+}
+100% {
+  left: -400%;
+}
+}
+
+/*---- BIO PAUL ----*/
+.bio-paul {
+background-color: var(--secondary-color);
+/*width: 100vw;*/
+font-family: var(--title-font);
+color:var(--darker-color);
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0.9rem 0.7rem;
+border-radius: 0.5rem;
+line-height: 1.3rem;
+margin-bottom: 2rem;
+height: 300px;
+}
+.bio-paul p {
+padding: 0rem 2rem;
+position: relative;
+bottom: 3.7rem;
+}
+.paul-portrait {
+width: 100px;
+position: relative;
+bottom: 3.2rem;
+}
+
+/*---- COUPS DE COEUR ----*/
+.emphase {
+/*font-family: 'Kanit', sans-serif;*/
+font-size: 1.2rem;
+font-weight: bold;
+font-family: var(--title-font);
+}
+.coeur {
+width: 50px;
+height: 50px;
+position: relative;
+top: 1%;
+right: 43%;
+}
+.wilder {
+background-color: var(--brighter-color);
+width: 80vw;
+display: flex;
+margin: auto;
+align-items: center;
+flex-direction: column;
+padding: 1rem 1rem;
+margin-bottom: 3.5rem;
+border-radius: 0.9rem;
+position: relative;
+box-shadow: 5px 2px 2px rgb(192, 192, 192);
+text-align: center;
+/*font-weight: bolder;*/
+font-family: var(--title-font);
+font-size: 0.3rem;
+/*position: absolute;*/
+}
+.wilder img:nth-child(2) {
+height: 200px;
+border: 0.1rem solid white;
+box-shadow: 0.3rem 0.12rem 0.12rem #636262;
+}
+.texte-white {
+color: var(--primary-color);
+font-weight: bolder;
+font-family: var(--title-font);
+}
+.wilder p {
+color : var(--darker-color);
+font-size: 1rem;
+}
+.wilder p em {
+color: var(--darker-color);
+font-weight: bolder;
+font-size: 1.1rem;
+}
+.lien-coupdecoeur {
+text-decoration: none;
+}
+
+/* ---- FOOTER ----*/
+footer {
+background-color: var(--primary-color);
+width: 100vw;
+height: 4rem;
+justify-content: space-between;
+align-items: center;
+display: flex;
+}
+h3 {
+color: white;
+font-family: var(--title-font);
+font-size: 0.7rem;
+margin-right: 0.5rem;
+margin-left: 0.5rem;
+padding: 0.5rem;
+text-align: center;
+}
+footer img {
+width: 25px;
+padding: 0rem 0.2rem;
+}
+
+/*---- VERSION DESKTOP ----*/
+@media screen and (min-width: 600px) {
+
+  #slider {
+    width: 65vw;
+    margin: 5rem auto;
+  }
+
+  .bio-paul {
+    width: 60vw;
+    /*height: 250px;*/
+    margin: auto;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    display: flex;
+    height: 200px;
+  }
+  .bio-paul p {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    width: 85%;
+    top : -105%;
+    right: -3%;
+  }
+  .paul-portrait {
+    width: 200px;
+    position: relative;
+    left: -49%;
+    top: 0.5%;
+    padding-right: 2rem;
+  }
+  .emphase {
+    font-size: 2rem;
+  }
+.wilders {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 6rem;
+    width: 70vw;
+    margin: auto;
+  }
+.wilder {
+    width: 28vw;
+    border-radius: 0.5rem;
+    margin: 3.5rem auto;
+    height: 736px;
+    padding: 1rem 0rem;
+}
+.wilder p {
+    color : var(--darker-color);
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+.wilder img:nth-child(2) {
+    height: 370px;
+    border: 0.1rem solid white;
+    box-shadow: 0.3rem 0.12rem 0.12rem #636262;
+    margin-top: 1rem;
+  }
+.texte-white {
+    font-size: 2rem;
+  }
+.coeur {
+    width: clamp(90px, 20%, 100px);
+    height: 90px;
+    position: relative;
+    top: 0.2%;
+    right: 36%;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    padding: 1rem;
+  }
+  footer img {
+    width: 50px;
+    padding: 0rem 0.2rem;
+  }
+}
+
+
+
+
+
+
+
+
