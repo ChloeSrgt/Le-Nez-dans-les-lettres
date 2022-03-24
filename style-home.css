@@ -311,9 +311,8 @@ padding: 0rem 0.2rem;
     width: 85%;
     top : -105%;
     right: -3%;
-    
   }
-.paul-portrait {
+  .paul-portrait {
     width: 200px;
     position: relative;
     left: -49%;
@@ -323,7 +322,6 @@ padding: 0rem 0.2rem;
   .emphase {
     font-size: 2rem;
   }
-
 .wilders {
     display: flex;
     flex-direction: row;
